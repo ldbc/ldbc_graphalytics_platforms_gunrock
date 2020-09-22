@@ -1,0 +1,4 @@
+report/
+output/
+target/
+*.tar.gz
