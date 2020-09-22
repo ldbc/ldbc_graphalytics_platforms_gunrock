@@ -59,10 +59,8 @@ public class GunrockPlatform implements Platform {
 		loader = new GunrockLoader(formattedGraph, platformConfig);
 
 		LOG.info("Loading graph " + formattedGraph.getName());
-		// Path loadedPath = Paths.get("./intermediate").resolve(formattedGraph.getName());
-		// Path loadedPath = Paths.get(".").resolve(formattedGraph.getEdgeFilePath());
-		//Path loadedPath = Paths.get("/Users/achal/Projects/ldbc_graphalytics/graphalytics-platform-gunrock/example-data-sets/graphs");
-		Path loadedPath = Paths.get("/home/achal/tmp/ldbc_graphalytics/graphalytics-platforms-gunrock/example-data-sets").resolve(formattedGraph.getEdgeFilePath());
+		Path loadedPath = Paths.get(formattedGraph.getEdgeFilePath());
+
 		try {
 
 			int exitCode = loader.load(loadedPath.toString());
